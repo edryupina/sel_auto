@@ -48,29 +48,39 @@ public class home {
 
         //7. Нажать Оформить
         click(By.xpath("//span [contains(text(),'Оформить')]"));
-      //  ArrayList <String> NewTab = new ArrayList<String>(driver.getWindowHandles());
-     //   driver.switchTo().window(NewTab.get(1));
-
-                 WebElement issue = driver.findElement(By.xpath("//span [contains(text(),'Оформление')]"));
-                 wait.until(ExpectedConditions.visibilityOf(issue));
-
 
         //8.       На вкладке Оформить заполнить поля:
         //•       Фамилию и Имя, Дату рождения застрахованных
-        fillField(By.name("insured0_surname"),"Дрюпина");
-      //  driver.findElement(By.name("//*[contains(text(),'insured0_surname')]//div[@role='listbox']")).click();
-        driver.findElement(By.name("insured0_surname")).click();
-
-
-        // fillField(By.xpath("//*[contains(text(),'Фамилия /Surname')]/ancestor::div[contains(@class,'form-group')]//input"), "Шенген");
-       // driver.findElement(By.xpath("//*[contains(text(),'Фамилия /Surname')]/ancestor::div[contains(@class,'form-group')]//div[@role='listbox']")).click();
-
-
-        //         fullFill(By.name("insured0_surname"),"Romanov");
+        fillField(By.name("insured0_surname"),"Dryupina");
+        fillField(By.name("insured0_name"),"Ekaterina");
+        fillField(By.name("insured0_birthDate"),"23.03.1985");
         //•       Данные страхователя: Фамилия, Имя, Отчество, Дата рождения, Пол
+        fillField(By.name("surname"),"Дрюпина");
+        fillField(By.name("name"),"Екатерина");
+        fillField(By.name("middlename"),"Игоревна");
+        fillField(By.name("birthDate"),"23.03.1985");
+        fillField(By.name("female"), "1");
+
+
+  //      <h4 class="b-form-label b-text-field-label">Пол</h4>
+//<span ng-class="{'b-radio-field': 1, 'b-checked-radio-field': formdata.insurer.GENDER == 1}" data-field="true" class="b-radio-field b-checked-radio-field">
+  //      <input ng-model="formdata.insurer.GENDER" type="radio" name="female" class="b-radio-field-entity ng-valid ng-dirty ng-touched ng-valid-parse" value="1"></span>
+//<label class="b-form-label b-inline-lable">женский</label>
+//<span ng-class="{'b-radio-field': 1, 'b-checked-radio-field': formdata.insurer.GENDER == 1}" data-field="true" class="b-radio-field b-checked-radio-field">
+  //     <input ng-model="formdata.insurer.GENDER" type="radio" name="female" class="b-radio-field-entity ng-valid ng-dirty ng-touched ng-valid-parse" value="1"></span>
+
+        //<input ng-model="formdata.insurer.GENDER" type="radio" name="male" class="b-radio-field-entity ng-valid ng-dirty ng-touched" value="0">
         //•       Паспортные данные
+        fillField(By.name("passport_series"),"36 09");
+        fillField(By.name("passport_number"),"123456");
+        fillField(By.name("issueDate"),"01.01.2001");
+        fillField(By.name("issuePlace"),"ОУФМС России по Москве");
+
         //•       Контактные данные не заполняем
         //9.       Проверить, что все поля заполнены правильно
+
+
+
         //10.   Нажать продолжить
         WebElement continueBatton = driver.findElement(By.xpath("//span [contains(text(),'Продолжить')]"));
         wait.until(ExpectedConditions.visibilityOf(continueBatton)).click();
