@@ -39,8 +39,7 @@ public class home {
 
         //4. Проверить наличие на странице заголовка – Страхование путешественников
         // тута чего-то неправильно проверяю???
-        assertEquals("Страхование путешественников",
-        driver.findElement(By.xpath("//div[@class='sbrf-rich-outer']")).getText());
+        assertEquals("Страхование путешественников",driver.findElement(By.xpath("//div[@class='sbrf-rich-outer']")).getText());
 
         //5. Нажать на – Оформить Онлайн (самой кнопки нет, есть только информационный блок)
         click(By.xpath("//a//img [contains(@src,'/portalserver/content/atom/contentRepository/content/person/travel/banner-zashita-traveler.jpg?id=f6c836e1-5c5c-4367-b0d0-bbfb96be9c53')]"));
