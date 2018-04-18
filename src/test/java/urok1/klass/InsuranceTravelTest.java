@@ -67,8 +67,8 @@ public class InsuranceTravelTest {
         new Actions(driver).sendKeys( driver.findElement(By.xpath("//*[contains(text(),'Дата первой поездки')]/parent::div//input")), Keys.TAB);
 
 
-        fillField(By.xpath("(//input[@data-test-name='FullName'])[1]"), "IVAN IVANOV");
-        fillField(By.xpath("//input[@data-test-name='BirthDate']"), "12121990");
+        fillField(By.xpath("(//input[@data-test-name='fullName'])[1]"), "IVAN IVANOV");
+        fillField(By.xpath("//input[@data-test-name='birthDate']"), "12121990");
 
 
         click(By.xpath("//*[contains(text(),'активный отдых')]/ancestor::div/div[@class='toggle off toggle-rgs']"));
